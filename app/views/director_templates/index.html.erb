@@ -3,10 +3,12 @@
 <table border="1">
   <% @list_of_directors.each do |dir| %>
     <tr>
+      <td><%= dir.id %></td>
+      <td>
+      <img src="http://robohash.org/<%= dir.image %>">
+      </td>
       <td><%= dir.name %></td>
       <td><%= dir.dob %></td>
-      <td><%= dir.bio %></td>
-      <td><%= dir.id %></td>
-    </tr>
-  <% end %>
-</table>
+      </tr>
+    <% end %>
+  </table>
