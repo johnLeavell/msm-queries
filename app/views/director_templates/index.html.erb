@@ -5,10 +5,13 @@
     <tr>
       <td><%= dir.id %></td>
       <td>
-      <img src="http://robohash.org/<%= dir.image %>">
+        <img src="http://robohash.org/<%= dir.image %>">
       </td>
       <td><%= dir.name %></td>
       <td><%= dir.dob %></td>
-      </tr>
-    <% end %>
-  </table>
+      <td><a href="/directors/<%= dir.id %>">
+          Show details</a>
+      </td>
+    </tr>
+  <% end %>
+</table>
