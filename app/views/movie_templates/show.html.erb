@@ -1,10 +1,6 @@
-<h1>Movie # details<h1/>
-<a href="/">
-        Home
-      </a>
     </nav>
-    
-    <h1>
+
+<h1>
   Movie #1 details
 </h1>
 
@@ -15,64 +11,62 @@
 &nbsp;|&nbsp;
 
 <hr>
-
 <dl>
   <dt>
     Title
   </dt>
   <dd>
-    The Shawshank Redemption
+    <%= @the_movie.title%>
   </dd>
 
   <dt>
     Year
   </dt>
   <dd>
-    1994
+        <%= @the_movie.year%>
   </dd>
 
   <dt>
     Duration
   </dt>
   <dd>
-    142
+          <%= @the_movie.duration%>
   </dd>
 
   <dt>
     Description
   </dt>
   <dd>
-    Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.
+       <%= @the_movie.description%>
   </dd>
 
   <dt>
     Image
   </dt>
   <dd>
-    <img src="https://image.tmdb.org/t/p/w500/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg" style="width:250px;">
+   <img src="http://robohash.org/ <% @the_movie.image %>?set=set4">
   </dd>
 
   <dt>
     Director
   </dt>
   <dd>
+    <%= @the_director.name %>
 
-
-      Frank Darabont
   </dd>
 
   <dt>
     Created at
   </dt>
   <dd>
-    over 7 years ago
+     <%= time_ago_in_words(@the_movie.created_at) %> ago
   </dd>
 
   <dt>
     Updated at
   </dt>
   <dd>
-    over 7 years ago
+    <%= time_ago_in_words(@the_movie.updated_at) %> ago
   </dd>
 </dl>
 
